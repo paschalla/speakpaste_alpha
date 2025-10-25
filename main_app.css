@@ -1,0 +1,16 @@
+
+#app-grid {
+    layout: vertical;
+}
+
+#log {
+    height: 90%;
+    /* Uses a specific purple for consistency. */
+    border: tall #9370DB;
+}
+
+#status {
+    height: 10%;
+    content-align: center middle;
+    background: $surface-darken-1;
+}
