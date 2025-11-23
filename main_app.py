@@ -11,7 +11,7 @@ from recorder import AudioRecorder
 from transcriber import Transcriber
 from clipboard import copy_to_clipboard
 
-class SpeakpasteApp(App):
+class Speakpaste(App):
     """A hotkey-activated dictation TUI."""
 
     # MODIFICATION: Disable Textual's mouse capture.
@@ -117,5 +117,5 @@ if __name__ == "__main__":
 }
 """
     create_fresh_css(main_css)
-    app = SpeakpasteApp()
+    app = Speakpaste()
     app.run()
