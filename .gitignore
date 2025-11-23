@@ -5,3 +5,4 @@ os
 sys
 .vscode/launch.json
 readme2.md
+__pycache__
