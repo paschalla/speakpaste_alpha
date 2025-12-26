@@ -11,6 +11,12 @@ from recorder import AudioRecorder
 from transcriber import Transcriber
 from clipboard import copy_to_clipboard
 
+class RecordingLog(RichLog):
+    def key_space(self):
+        # Forward the space key to the app's recording action
+        self.app.start_recording()
+
+
 class Speakpaste(App):
     """A hotkey-activated dictation TUI."""
 
@@ -40,7 +46,7 @@ class Speakpaste(App):
         """Create child widgets for the app."""
         yield Header()
         yield Container(
-            RichLog(highlight=True, markup=True, id="log"),
+            RecordingLog(highlight=True, markup=True, id="log"),
             Static("Press [b]SPACE[/b] to start recording. Press [b]Ctrl+Q[/b] to quit.", id="status"),
             id="app-grid"
         )

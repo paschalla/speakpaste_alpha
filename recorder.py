@@ -39,7 +39,7 @@ class AudioRecorder:
             print(f"Please ensure a microphone is connected and configured in your system. Details: {e}", file=sys.stderr)
             raise
 
-    def _is_silent(self, data_chunk):
+    def _is_silent(self, data_chunk): 
         """Returns 'True' if the given audio chunk is silent."""
         rms = np.sqrt(np.mean(data_chunk**2))
         return rms < SILENCE_THRESHOLD
